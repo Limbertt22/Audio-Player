@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp12"
+             x:Class="MauiApp12.App">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <Color x:Key="PageBackgroundColor">#512bdf</Color>
+            <Color x:Key="PrimaryTextColor">White</Color>
+
+            <Style TargetType="StackLayout" x:Key="stack">
+                <Setter Property="Background" Value="Black"/>
+                <Setter Property="WidthRequest" Value="600"/>
+                <Setter Property="HeightRequest" Value="200"/>
+            </Style>
+
+            <Style TargetType="StackLayout" x:Key="StackMenu">
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="WidthRequest" Value="80"/>
+                <Setter Property="HeightRequest" Value="30"/>
+            </Style>
+
+            <Style TargetType="StackLayout" x:Key="StackCollections">
+                <Setter Property="Background" Value="DarkGray"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+
+            <Style TargetType="Button" x:Key="choseMusic">
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="Text" Value="select file"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="WidthRequest" Value="200"/>
+                <Setter Property="HeightRequest" Value="100"/>
+            </Style>
+
+            <Style TargetType="StackLayout" x:Key="stack2">
+                <Setter Property="Background" Value="DarkGrey"/>
+                <Setter Property="WidthRequest" Value="600"/>
+                <Setter Property="HeightRequest" Value="500"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="Cont">
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+
+            <Style TargetType="Slider" x:Key="Slider">
+                <Setter Property="WidthRequest" Value="430"/>
+                <Setter Property="HeightRequest" Value="30"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="Icons">
+                <Setter Property="FontSize" Value="25"/>
+            </Style>
+
+            <Style TargetType="Frame" x:Key="FrameSpeed">
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="WidthRequest" Value="100"/>
+                <Setter Property="HeightRequest" Value="50"/>
+            </Style>
+
+            <Style TargetType="Slider" x:Key="AudioSlider">
+                <Setter Property="WidthRequest" Value="100"/>
+            </Style>
+
+            <Style TargetType="Entry" x:Key="entrada">
+                <Setter Property="Background" Value="Black"/>
+                <Setter Property="TextColor" Value="Green"/>
+                <Setter Property="FontSize" Value="35"/>
+                <Setter Property="IsReadOnly" Value="True"/>
+                <Setter Property="WidthRequest" Value="500"/>
+                <Setter Property="HeightRequest" Value="150"/>
+            </Style>
+
+            <Style TargetType="Frame" x:Key="frameSlider">
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="WidthRequest" Value="530"/>
+                <Setter Property="HeightRequest" Value="70"/>
+                <Setter Property="BorderColor" Value="White"/>
+                <Setter Property="Background" Value="White"/>
+            </Style>
+
+            <Style TargetType="Frame" x:Key="entradaFrame">
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="BorderColor" Value="White"/>
+                <Setter Property="Background" Value="Black"/>
+                <Setter Property="WidthRequest" Value="530"/>
+                <Setter Property="HeightRequest" Value="160"/>
+            </Style>
+
+            <Style TargetType="Frame" x:Key="FrameCollections">
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="BorderColor" Value="Black"/>
+                <Setter Property="WidthRequest" Value="200"/>
+                <Setter Property="HeightRequest" Value="100"/>
+            </Style>
+
+            <Style TargetType="Frame" x:Key="frameContent">
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="BorderColor" Value="White"/>
+                <Setter Property="WidthRequest" Value="600"/>
+                <Setter Property="HeightRequest" Value="400"/>
+            </Style>
+
+            <Style TargetType="Frame" x:Key="titleFrame">
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="BorderColor" Value="Black"/>
+                <Setter Property="WidthRequest" Value="600"/>
+                <Setter Property="HeightRequest" Value="100"/>
+                <Setter Property="Background" Value="Black"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="titleLabel">
+                <Setter Property="FontSize" Value="26"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+
+            <Style TargetType="Frame" x:Key="frameAll">
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="BorderColor" Value="Black"/>
+                <Setter Property="Background" Value="Black"/>
+            </Style>
+
+            <Style TargetType="Frame" x:Key="frameAll2">
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="BorderColor" Value="DarkGray"/>
+                <Setter Property="Background" Value="DarkGray"/>
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
+                <Setter Property="FontFamily" Value="OpenSansRegular" />
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
+                <Setter Property="FontFamily" Value="OpenSansRegular" />
+                <Setter Property="BackgroundColor" Value="#2b0b98" />
+                <Setter Property="Padding" Value="14,10" />
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

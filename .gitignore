@@ -1,0 +1,17 @@
+# Ignora configuraciones de Visual Studio
+.vs/
+.vscode/
+
+# Ignora binarios y temporales
+bin/
+obj/
+
+# Ignora archivos del sistema
+*.user
+*.suo
+*.log
+*.tmp
+
+# Ignora archivos específicos de MAUI
+*.apk
+*.aab

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp12"
+             xmlns:shared="clr-namespace:MauiApp12.Shared;assembly=MauiApp12.Shared"
+             x:Class="MauiApp12.MainPage"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Orientation="Horizontal">
+
+        <Frame Style="{StaticResource frameAll}">
+            <StackLayout>
+                <StackLayout Style="{StaticResource stack}">
+                    <Frame Style="{StaticResource entradaFrame}">
+                        <StackLayout Orientation="Horizontal" Background="Black">
+                            <Entry Style="{StaticResource entrada}" x:Name="Entrada" Text="Introduction"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <Frame Style="{StaticResource frameSlider}">
+                        <StackLayout Orientation="Horizontal">
+                            <Slider Style="{StaticResource Slider}" x:Name="SliderVideo" ValueChanged="SliderVideo_ValueChanged"/>
+                            <Label Text="00:00" Style="{StaticResource Cont}" x:Name="LabelTime"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="▶" Style="{StaticResource Icons}" x:Name="bottomplay">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Start"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                        <Label Text="🔉" Style="{StaticResource Icons}" x:Name="BottomVolume">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+
+
+                        <Slider Style="{StaticResource AudioSlider}" x:Name="SliderVolume" Maximum="1" Minimum="0" ValueChanged="SliderVolume_ValueChanged"/>
+                        <Label Text="⏭" Style="{StaticResource Icons}"/>
+
+                        <StackLayout x:Name="speedMenuN" VerticalOptions="Center" TranslationX="180" TranslationY="-13"  HorizontalOptions="Center">
+                            <StackLayout HeightRequest="60" WidthRequest="160" Background="White"  VerticalOptions="Center" HorizontalOptions="Center">
+                                <Label Text="⚡"/>
+                            </StackLayout>
+
+                            <Picker HeightRequest="60" WidthRequest="160" TranslationY="-20" Background="White" SelectedIndexChanged="Picker_SelectedIndexChanged">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>1.0</x:String>
+                                        <x:String>0.5</x:String>
+                                        <x:String>1.5</x:String>
+                                        <x:String>2.0</x:String>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout VerticalOptions="End" TranslationY="10"  HorizontalOptions="Center">
+                    <Button Style="{StaticResource choseMusic}" Clicked="Button_Clicked_1"/>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+
+        <Frame Style="{StaticResource frameAll2}">
+            <StackLayout>
+                <StackLayout Style="{StaticResource stack2}">
+                    <Frame Style="{StaticResource titleFrame}">
+                        <Label Text="Playlist" Style="{StaticResource titleLabel}"/>
+                    </Frame>
+
+                    <Frame Style="{StaticResource frameContent}">
+                        <CollectionView ItemsSource="{Binding listaObservable}"
+                                SelectionMode="Single"
+                                Background="White" SelectionChanged="CollectionView_SelectionChanged">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Frame Style="{StaticResource FrameCollections}">
+                                        <StackLayout WidthRequest="190" HeightRequest="90">
+
+                                            <StackLayout TranslationX="-20" VerticalOptions="Start" HorizontalOptions="End">
+                                                <Label Text="🗑" FontSize="20">
+                                                    <Label.GestureRecognizers>
+                                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                                                    </Label.GestureRecognizers>
+                                                </Label>
+                                            </StackLayout>
+
+                                            <Label Text="{Binding Name}" TextColor="Black"/>
+                                        </StackLayout>
+                                    </Frame>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>
